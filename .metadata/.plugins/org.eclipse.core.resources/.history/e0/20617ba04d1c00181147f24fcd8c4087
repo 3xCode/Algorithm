@@ -1,0 +1,39 @@
+package com.sunyang.¿ìËÙÅÅĞò;
+
+public class QuickSort {
+
+	public static void main(String[] args) {
+
+		int a[] = { 5, 2, 13, 4, 8, 12 };
+		sort(a, 0, a.length - 1);
+	}
+
+	public int quickSort(int[] a, int start, int end) {
+
+		int middle = a[0];
+		
+		while(a[end]<=middle && start<end){
+			--end;
+		}
+		a[end] = a[start];
+		
+		while(a[start]>=middle && start<end){
+			++start;
+		}
+		
+		a[start] = a[end];
+		
+		
+		return 0;
+	}
+
+	public void sort(int[] a, int start, int end) {
+		if(start>=end){
+			return;
+		}
+		int index = quickSort(a,start,end);
+		sort(a,start,index-1);
+		sort(a,index+1,end);
+	}
+
+}
