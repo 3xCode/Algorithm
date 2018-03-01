@@ -7,8 +7,22 @@ Java/.metadata/.log
 *.resources
 *.snap
 Java/RemoteSystemsTempFiles/.project
+<<<<<<< HEAD
 *.snap
 *.snap
 *.snap
 Java/.metadata/.plugins/org.eclipse.core.resources/.projects/算法/.syncinfo.snap
 *.png
+=======
+Java/.metadata/.log
+*.prefs
+*.index
+*.index
+Java/.metadata/.plugins/org.eclipse.jdt.core/1470073441.index
+Java/.metadata/.plugins/org.eclipse.jdt.core/1408211338.index
+Java/.metadata/.log
+*.jar
+*.index
+*.xml
+>>>>>>> c4b28ca35eb062605623c65fd08ae2e9b59e4ee5
+*.index
