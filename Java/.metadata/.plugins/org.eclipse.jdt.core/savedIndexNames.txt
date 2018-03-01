@@ -6,7 +6,6 @@ INDEX VERSION 1.127+C:\3xCode\GitHub\Algorithm\Java\.metadata\.plugins\org.eclip
 289811613.index
 3677362244.index
 3065053440.index
-1117831564.index
 664140773.index
 3767767424.index
 61436394.index
