@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.127+C:\3xCode\GitHub\Algorithm\Java\.metadata\.plugins\org.eclipse.jdt.core
 767842954.index
 3786438684.index
@@ -17,3 +18,7 @@ INDEX VERSION 1.127+C:\3xCode\GitHub\Algorithm\Java\.metadata\.plugins\org.eclip
 2951431056.index
 1470073441.index
 1101913381.index
+=======
+INDEX VERSION 1.126+D:\3xCode\github\Algorithm\Java\.metadata\.plugins\org.eclipse.jdt.core
+1117831564.index
+>>>>>>> c4b28ca35eb062605623c65fd08ae2e9b59e4ee5
