@@ -36,13 +36,13 @@ class BTree implements AbsTree {
 				currentNode = currentNode.right;
 				isLeft = false;
 			}
-			
-			Node newNode = new Node(position, value);
-			if (isLeft) {
-				parentNode.left = newNode;
-			} else {
-				parentNode.right = newNode;
-			}
+		}
+
+		Node newNode = new Node(position, value);
+		if (isLeft) {
+			parentNode.left = newNode;
+		} else {
+			parentNode.right = newNode;
 		}
 
 	}
@@ -50,7 +50,7 @@ class BTree implements AbsTree {
 	public boolean delete(int position) {
 		// É¾³ýÒ¶×Ó½Úµã
 		Node currentNode = root;
-		Node parentNode = null;
+		Node parentNode = root;
 		boolean isLeft = true;
 		while (currentNode != null && currentNode.position != position) {
 			parentNode = currentNode;
@@ -86,14 +86,14 @@ class BTree implements AbsTree {
 			if (isLeft) {
 				parentNode.left = currentNode.left;
 			} else {
-				parentNode.right = currentNode.right;
+				parentNode.right = currentNode.left;
 			}
 		} else if (currentNode.left == null) {
 			if (currentNode == root) {
 				root = currentNode.right;
 			}
 			if (isLeft) {
-				parentNode.left = currentNode.left;
+				parentNode.left = currentNode.right;
 			} else {
 				parentNode.right = currentNode.right;
 			}
@@ -143,27 +143,27 @@ class BTree implements AbsTree {
 		destory(root);
 	}
 
-	public void preTraversal(Node root) {
-		if (root != null) {
-			System.out.println(root.position + ":" + root.value);
+	public void preTraversal(Node rootNode) {
+		if (rootNode != null) {
+			System.out.println(rootNode.position + ":" + rootNode.value);
+			preTraversal(rootNode.left);
+			preTraversal(rootNode.right);
 		}
-		preTraversal(root.left);
-		preTraversal(root.right);
 	}
 
-	public void middleTraversal(Node root) {
-		if (root != null) {
-			middleTraversal(root.left);
+	public void middleTraversal(Node rootNode) {
+		if (rootNode != null) {
+			middleTraversal(rootNode.left);
+			System.out.println(rootNode.position + ":" + rootNode.value);
+			middleTraversal(rootNode.right);
 		}
-		System.out.println(root.position + ":" + root.value);
-		middleTraversal(root.right);
 	}
 
-	public void postTraversal(Node root) {
-		if (root != null) {
-			postTraversal(root.left);
+	public void postTraversal(Node rootNode) {
+		if (rootNode != null) {
+			postTraversal(rootNode.left);
+			postTraversal(rootNode.right);
+			System.out.println(rootNode.position + ":" + rootNode.value);
 		}
-		postTraversal(root.right);
-		System.out.println(root.position + ":" + root.value);
 	}
 }
